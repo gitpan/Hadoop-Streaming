@@ -1,0 +1,28 @@
+{
+   "resources" : {
+      "repository" : "http://github.com/spazm/hadoop-streaming-frontend"
+   },
+   "generated_by" : "Dist::Zilla version 1.093400",
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "version" : "0.100050",
+   "name" : "Hadoop-Streaming",
+   "author" : [
+      "andrew grangaard <spazm@cpan.org>",
+      "Naoya Ito <naoya@hatena.ne.jp>"
+   ],
+   "license" : "perl",
+   "requires" : {
+      "Moose::Role" : "0",
+      "Test::More" : "0",
+      "Params::Validate" : "0",
+      "FindBin" : "0",
+      "IO::Handle" : "0",
+      "Test::Command" : "0",
+      "Moose" : "0"
+   },
+   "abstract" : "Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface."
+}
+

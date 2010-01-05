@@ -1,0 +1,13 @@
+Revision history for Hadoop-Streaming
+
+0.100050  2010-01-05 04:22:37 PST8PDT
+    First CPAN release.
+
+    Cloned from naoya at github ( http://github.com/naoya/ )
+    Moved from Hadoop:: to Hadoop::Streaming::
+    Started using Dist::Zilla
+    Added documentation --> pod coverage went from 0% to 100%
+    Added tests to exercise the example code.
+      tests now require Test::Command
+    Added second example
+    Made both examples work correctly when run locally
