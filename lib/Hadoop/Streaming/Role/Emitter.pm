@@ -1,5 +1,5 @@
 package Hadoop::Streaming::Role::Emitter;
-our $VERSION = '0.100050';
+our $VERSION = '0.100060';
 use Moose::Role;
 
 requires qw/run emit/;
@@ -15,7 +15,7 @@ Hadoop::Streaming::Role::Emitter
 
 =head1 VERSION
 
-version 0.100050
+version 0.100060
 
 =head1 AUTHORS
 

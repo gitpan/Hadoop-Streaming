@@ -11,7 +11,7 @@ WriteMakefile(
   NAME      => 'Hadoop::Streaming',
   AUTHOR    => "andrew\ grangaard\ \<spazm\@cpan\.org\>\,\ Naoya\ Ito\ \<naoya\@hatena\.ne\.jp\>",
   ABSTRACT  => "Simplify\ writing\ Hadoop\ Streaming\ jobs\.\ Write\ a\ map\(\)\ and\ reduce\(\)\ function\ and\ let\ this\ role\ handle\ the\ Stream\ interface\.",
-  VERSION   => '0.100050',
+  VERSION   => '0.100060',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

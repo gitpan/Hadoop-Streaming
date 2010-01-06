@@ -7,7 +7,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.100050",
+   "version" : "0.100060",
    "name" : "Hadoop-Streaming",
    "author" : [
       "andrew grangaard <spazm@cpan.org>",

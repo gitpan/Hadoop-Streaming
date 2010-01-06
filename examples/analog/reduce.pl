@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 package Analog::Reducer;
-our $VERSION = '0.100050';
+our $VERSION = '0.100060';
 use Moose;
 with 'Hadoop::Streaming::Reducer';
 
@@ -17,5 +17,5 @@ sub reduce {
 }
 
 package main;
-our $VERSION = '0.100050';
+our $VERSION = '0.100060';
 Analog::Reducer->run;
