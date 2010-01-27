@@ -7,7 +7,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.100060",
+   "version" : "0.100270",
    "name" : "Hadoop-Streaming",
    "author" : [
       "andrew grangaard <spazm@cpan.org>",
@@ -16,10 +16,11 @@
    "license" : "perl",
    "requires" : {
       "Moose::Role" : "0",
-      "Test::More" : "0",
-      "Params::Validate" : "0",
       "FindBin" : "0",
       "IO::Handle" : "0",
+      "ExtUtils::MakeMaker" : "0",
+      "Test::More" : "0",
+      "Params::Validate" : "0",
       "Test::Command" : "0",
       "Moose" : "0"
    },

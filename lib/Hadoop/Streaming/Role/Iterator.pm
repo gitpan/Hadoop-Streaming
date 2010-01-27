@@ -1,5 +1,5 @@
 package Hadoop::Streaming::Role::Iterator;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 use Moose::Role;
 
 requires qw/has_next next/;
@@ -16,7 +16,7 @@ Hadoop::Streaming::Role::Iterator
 
 =head1 VERSION
 
-version 0.100060
+version 0.100270
 
 =head1 AUTHORS
 

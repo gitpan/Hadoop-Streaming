@@ -1,17 +1,17 @@
 #!/usr/bin/env perl
 
 package Analog::Mapper;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 use Moose;
 with 'Hadoop::Streaming::Mapper';
 
 sub map {
-    my ($self, $key, $value) = @_;
+    my ($self, $line) = @_;
 
-    my @segments = split /\s+/, $value;
+    my @segments = split /\s+/, $line;
     $self->emit($segments[1] => 1); #referrer
 }
 
 package main;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 Analog::Mapper->run;

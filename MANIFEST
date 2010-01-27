@@ -29,6 +29,7 @@ t/analog/map.pl
 t/analog/reduce.pl
 t/release-pod-coverage.t
 t/release-pod-syntax.t
+t/sort.pl
 t/wordcount/expected-map.out
 t/wordcount/expected-reduce.out
 t/wordcount/map.pl

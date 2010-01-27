@@ -1,5 +1,5 @@
 package Hadoop::Streaming::Mapper;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 use Moose::Role;
 
 use IO::Handle;
@@ -19,7 +19,7 @@ sub run {
     while (my $line = STDIN->getline) {
         chomp $line;
 
-        $self->map(undef, $line);
+        $self->map($line);
     }
 }
 
@@ -51,7 +51,7 @@ Hadoop::Streaming::Mapper - Simplify writing Hadoop Streaming jobs. Write a map(
 
 =head1 VERSION
 
-version 0.100060
+version 0.100270
 
 =head1 SYNOPSIS
 
@@ -62,9 +62,9 @@ version 0.100060
   with 'Hadoop::Streaming::Mapper';
   
   sub map {
-      my ($self, $key, $value) = @_;
+      my ($self, $line) = @_;
   
-      for (split /\s+/, $value) {
+      for (split /\s+/, $line) {
           $self->emit( $_ => 1 );
       }
   }

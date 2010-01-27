@@ -1,5 +1,5 @@
 package Hadoop::Streaming::Reducer;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 use Moose::Role;
 
 with 'Hadoop::Streaming::Role::Emitter';
@@ -60,7 +60,7 @@ Hadoop::Streaming::Reducer - Simplify writing Hadoop Streaming jobs. Write a map
 
 =head1 VERSION
 
-version 0.100060
+version 0.100270
 
 =head1 SYNOPSIS
 

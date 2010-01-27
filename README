@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Hadoop-Streaming, version
-0.100060:
+0.100270:
 
   Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface.
 

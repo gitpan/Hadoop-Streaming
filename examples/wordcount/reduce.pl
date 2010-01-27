@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 package WordCount::Reducer;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 use Moose;
 with qw/Hadoop::Streaming::Reducer/;
 
@@ -18,5 +18,5 @@ sub reduce {
 }
 
 package main;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 WordCount::Reducer->run;

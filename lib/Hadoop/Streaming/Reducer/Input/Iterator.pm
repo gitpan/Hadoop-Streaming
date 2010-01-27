@@ -1,5 +1,5 @@
 package Hadoop::Streaming::Reducer::Input::Iterator;
-our $VERSION = '0.100060';
+our $VERSION = '0.100270';
 use Moose;
 with 'Hadoop::Streaming::Role::Iterator';
 
@@ -71,7 +71,7 @@ Hadoop::Streaming::Reducer::Input::Iterator
 
 =head1 VERSION
 
-version 0.100060
+version 0.100270
 
 =head1 METHODS
 
