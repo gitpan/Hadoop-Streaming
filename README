@@ -1,12 +1,13 @@
 
 
-This archive contains the distribution Hadoop-Streaming, version
-0.100270:
+This archive contains the distribution Hadoop-Streaming,
+version 0.101860:
 
-  Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface.
+  Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.
 
 This software is copyright (c) 2010 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
 

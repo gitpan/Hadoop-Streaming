@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 
 package Analog::Mapper;
-our $VERSION = '0.100270';
 use Moose;
 with 'Hadoop::Streaming::Mapper';
 
@@ -13,5 +12,4 @@ sub map {
 }
 
 package main;
-our $VERSION = '0.100270';
 Analog::Mapper->run;

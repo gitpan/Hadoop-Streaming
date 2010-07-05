@@ -1,8 +1,8 @@
 package Hadoop::Streaming::Role::Iterator;
-our $VERSION = '0.100270';
 use Moose::Role;
 
-requires qw/has_next next/;
+requires qw(has_next next);
+#ABSTRACT: Role to require has_next and next
 
 1;
 
@@ -12,16 +12,25 @@ __END__
 
 =head1 NAME
 
-Hadoop::Streaming::Role::Iterator
+Hadoop::Streaming::Role::Iterator - Role to require has_next and next
 
 =head1 VERSION
 
-version 0.100270
+version 0.101860
 
 =head1 AUTHORS
 
-  andrew grangaard <spazm@cpan.org>
-  Naoya Ito <naoya@hatena.ne.jp>
+=over 4
+
+=item *
+
+andrew grangaard <spazm@cpan.org>
+
+=item *
+
+Naoya Ito <naoya@hatena.ne.jp>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

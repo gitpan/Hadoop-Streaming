@@ -1,7 +1,8 @@
 package Hadoop::Streaming::Reducer::Input::ValuesIterator;
-our $VERSION = '0.100270';
 use Moose;
 with 'Hadoop::Streaming::Role::Iterator';
+
+#ABSTRACT: Role providing access to values for a given key.
 
 has input_iter => (
     is       => 'ro',
@@ -9,26 +10,28 @@ has input_iter => (
     required => 1,
 );
 
-has first => (
-    is       => 'rw',
-);
+has first => ( is => 'rw', );
 
 
-sub has_next {
+sub has_next
+{
     my $self = shift;
     return 1 if $self->first;
     return unless defined $self->input_iter->input->next_key;
-    return $self->input_iter->current_key eq $self->input_iter->input->next_key ? 1 : 0;
+    return $self->input_iter->current_key eq
+        $self->input_iter->input->next_key ? 1 : 0;
 }
 
 
-sub next {
+sub next
+{
     my $self = shift;
-    if (my $first = $self->first) {
-        $self->first( undef );
+    if ( my $first = $self->first )
+    {
+        $self->first(undef);
         return $first;
     }
-    my ($key, $value) = $self->input_iter->input->each;
+    my ( $key, $value ) = $self->input_iter->input->each;
     $value;
 }
 
@@ -36,17 +39,16 @@ __PACKAGE__->meta->make_immutable;
 
 1;
 
-
 __END__
 =pod
 
 =head1 NAME
 
-Hadoop::Streaming::Reducer::Input::ValuesIterator
+Hadoop::Streaming::Reducer::Input::ValuesIterator - Role providing access to values for a given key.
 
 =head1 VERSION
 
-version 0.100270
+version 0.101860
 
 =head1 METHODS
 
@@ -66,8 +68,17 @@ Returns the next value available.  Reads from $ValuesIterator->input_iter->input
 
 =head1 AUTHORS
 
-  andrew grangaard <spazm@cpan.org>
-  Naoya Ito <naoya@hatena.ne.jp>
+=over 4
+
+=item *
+
+andrew grangaard <spazm@cpan.org>
+
+=item *
+
+Naoya Ito <naoya@hatena.ne.jp>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

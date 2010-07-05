@@ -2,6 +2,7 @@ Changes
 LICENSE
 MANIFEST
 META.json
+META.yml
 Makefile.PL
 README
 dist.ini
@@ -27,8 +28,6 @@ t/analog/expected-map.out
 t/analog/expected-reduce.out
 t/analog/map.pl
 t/analog/reduce.pl
-t/release-pod-coverage.t
-t/release-pod-syntax.t
 t/sort.pl
 t/wordcount/expected-map.out
 t/wordcount/expected-reduce.out

@@ -1,29 +1,49 @@
 {
-   "resources" : {
-      "repository" : "http://github.com/spazm/hadoop-streaming-frontend"
-   },
-   "generated_by" : "Dist::Zilla version 1.093400",
-   "meta-spec" : {
-      "version" : 1.4,
-      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
-   },
-   "version" : "0.100270",
-   "name" : "Hadoop-Streaming",
+   "abstract" : "Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.",
    "author" : [
       "andrew grangaard <spazm@cpan.org>",
       "Naoya Ito <naoya@hatena.ne.jp>"
    ],
-   "license" : "perl",
-   "requires" : {
-      "Moose::Role" : "0",
-      "FindBin" : "0",
-      "IO::Handle" : "0",
-      "ExtUtils::MakeMaker" : "0",
-      "Test::More" : "0",
-      "Params::Validate" : "0",
-      "Test::Command" : "0",
-      "Moose" : "0"
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.101811, CPAN::Meta::Converter version 2.101591",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
    },
-   "abstract" : "Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface."
+   "name" : "Hadoop-Streaming",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "IO::Handle" : 0,
+            "Moose" : 0,
+            "Moose::Role" : 0,
+            "Params::Validate" : 0
+         }
+      },
+      "test" : {
+         "requires" : {
+            "FindBin" : 0,
+            "Test::Command" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "http://github.com/spazm/hadoop-streaming-frontend.git",
+         "web" : "http://github.com/spazm/hadoop-streaming-frontend"
+      }
+   },
+   "version" : "0.101860"
 }
 

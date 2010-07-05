@@ -1,9 +1,10 @@
 package Hadoop::Streaming::Reducer::Input::Iterator;
-our $VERSION = '0.100270';
 use Moose;
 with 'Hadoop::Streaming::Role::Iterator';
 
 use Hadoop::Streaming::Reducer::Input::ValuesIterator;
+
+#ABSTRACT: Collects values for each key together with an iterator interface
 
 has input => (
     is       => 'ro',
@@ -67,11 +68,11 @@ __END__
 
 =head1 NAME
 
-Hadoop::Streaming::Reducer::Input::Iterator
+Hadoop::Streaming::Reducer::Input::Iterator - Collects values for each key together with an iterator interface
 
 =head1 VERSION
 
-version 0.100270
+version 0.101860
 
 =head1 METHODS
 
@@ -100,8 +101,17 @@ Returns an two element array containing the key and a Hadoop::Streaming::Reducer
 
 =head1 AUTHORS
 
-  andrew grangaard <spazm@cpan.org>
-  Naoya Ito <naoya@hatena.ne.jp>
+=over 4
+
+=item *
+
+andrew grangaard <spazm@cpan.org>
+
+=item *
+
+Naoya Ito <naoya@hatena.ne.jp>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

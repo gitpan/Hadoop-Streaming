@@ -1,17 +1,13 @@
 package Hadoop::Streaming::Reducer;
-our $VERSION = '0.100270';
 use Moose::Role;
 
-with 'Hadoop::Streaming::Role::Emitter';
-
 use IO::Handle;
-use Params::Validate qw/validate_pos/;
 use Hadoop::Streaming::Reducer::Input;
 
 with 'Hadoop::Streaming::Role::Emitter';
 requires qw/reduce/;
 
-# ABSTRACT: Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface.  The Reducer roll provides an iterator over the multiple values for a given key.
+# ABSTRACT: Simplify writing Hadoop Streaming jobs. Write a reduce() function and let this role handle the Stream interface.  This Reducer roll provides an iterator over the multiple values for a given key.
 
 
 
@@ -33,21 +29,6 @@ sub run {
     }
 }
 
-sub emit {
-    my ($self, $key, $value) = @_;
-    eval {
-        $self->put($key, $value);
-    };
-    if ($@) {
-        warn $@;
-    }
-}
-
-sub put {
-    my ($self, $key, $value) = validate_pos(@_, 1, 1, 1);
-    printf "%s\t%s\n", $key, $value;
-}
-
 1;
 
 
@@ -56,11 +37,11 @@ __END__
 
 =head1 NAME
 
-Hadoop::Streaming::Reducer - Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface.  The Reducer roll provides an iterator over the multiple values for a given key.
+Hadoop::Streaming::Reducer - Simplify writing Hadoop Streaming jobs. Write a reduce() function and let this role handle the Stream interface.  This Reducer roll provides an iterator over the multiple values for a given key.
 
 =head1 VERSION
 
-version 0.100270
+version 0.101860
 
 =head1 SYNOPSIS
 
@@ -101,23 +82,19 @@ After creating a new object instance, it reads from STDIN and calls $object->red
 
 Subclasses need only implement reduce() to produce a complete Hadoop Streaming compatible reducer.
 
-=head2 emit
-
-    $object->emit( $key, $value )
-
-This method emits a key,value pair in the format expected by Hadoop::Streaming.  It does this 
-by calling $self->put().  Catches errors from put and turns them into warnings.
-
-=head2 put
-
-    $object->put( $key, $value )
-
-This method emits a key,value pair to STDOUT in the format expected by Hadoop::Streaming. (key\tvalue\n)
-
 =head1 AUTHORS
 
-  andrew grangaard <spazm@cpan.org>
-  Naoya Ito <naoya@hatena.ne.jp>
+=over 4
+
+=item *
+
+andrew grangaard <spazm@cpan.org>
+
+=item *
+
+Naoya Ito <naoya@hatena.ne.jp>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

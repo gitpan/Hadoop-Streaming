@@ -1,43 +1,25 @@
 package Hadoop::Streaming::Mapper;
-our $VERSION = '0.100270';
 use Moose::Role;
-
 use IO::Handle;
-use Params::Validate qw/validate_pos/;
 
 with 'Hadoop::Streaming::Role::Emitter';
-requires qw/map/;
+#requires qw(emit counter status); #from Hadoop::Streaming::Role::Emitter
+requires qw(map);  # from consumer
 
-# ABSTRACT: Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface.
+# ABSTRACT: Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.
 
 
 
-sub run {
+sub run
+{
     my $class = shift;
-    my $self = $class->new;
+    my $self  = $class->new;
 
-    while (my $line = STDIN->getline) {
+    while ( my $line = STDIN->getline )
+    {
         chomp $line;
-
         $self->map($line);
     }
-}
-
-
-sub emit {
-    my ($self, $key, $value) = @_;
-    eval {
-        $self->put($key, $value);
-    };
-    if ($@) {
-        warn $@;
-    }
-}
-
-
-sub put {
-    my ($self, $key, $value) = validate_pos(@_, 1, 1, 1);
-    printf "%s\t%s\n", $key, $value;
 }
 
 1;
@@ -47,11 +29,11 @@ __END__
 
 =head1 NAME
 
-Hadoop::Streaming::Mapper - Simplify writing Hadoop Streaming jobs. Write a map() and reduce() function and let this role handle the Stream interface.
+Hadoop::Streaming::Mapper - Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.
 
 =head1 VERSION
 
-version 0.100270
+version 0.101860
 
 =head1 SYNOPSIS
 
@@ -61,20 +43,18 @@ version 0.100270
   use Moose;
   with 'Hadoop::Streaming::Mapper';
   
-  sub map {
-      my ($self, $line) = @_;
-  
-      for (split /\s+/, $line) {
-          $self->emit( $_ => 1 );
-      }
+  sub map
+  {
+    my ( $self, $line ) = @_;
+    $self->emit( $_ => 1 ) for ( split /\s+/, $line );
   }
   
   package main;
   Wordcount::Mapper->run;
 
 Your mapper class must implement map($key,$value) and your reducer must 
-implement reduce($key,$value).  Your classes will have emit() and run() 
-methods added via role.
+implement reduce($key,$value).  Your classes will have emit(), counter(),
+status() and run() methods added via a role.
 
 =head1 METHODS
 
@@ -88,25 +68,19 @@ After creating a new object instance, it reads from STDIN and calls
 $object->map() on each line of input.  Subclasses need only implement map() 
 to produce a complete Hadoop Streaming compatible mapper.
 
-=head2 emit
-
-    $object->emit( $key, $value )
-
-This method emits a key,value pair in the format expected by Hadoop::Streaming.
-It does this by calling $self->put().  This catches errors from put and turns 
-them into warnings.
-
-=head2 put
-
-    $object->put( $key, $value )
-
-This method emits a key,value pair to STDOUT in the format expected by 
-Hadoop::Streaming: ( key \t value \n )
-
 =head1 AUTHORS
 
-  andrew grangaard <spazm@cpan.org>
-  Naoya Ito <naoya@hatena.ne.jp>
+=over 4
+
+=item *
+
+andrew grangaard <spazm@cpan.org>
+
+=item *
+
+Naoya Ito <naoya@hatena.ne.jp>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

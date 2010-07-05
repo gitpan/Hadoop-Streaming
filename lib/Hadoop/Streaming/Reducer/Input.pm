@@ -1,7 +1,8 @@
 package Hadoop::Streaming::Reducer::Input;
-our $VERSION = '0.100270';
 use Moose;
 use Hadoop::Streaming::Reducer::Input::Iterator;
+
+#ABSTRACT: Parse input stream for reducer
 
 has handle => (
     is       => 'ro',
@@ -65,11 +66,11 @@ __END__
 
 =head1 NAME
 
-Hadoop::Streaming::Reducer::Input
+Hadoop::Streaming::Reducer::Input - Parse input stream for reducer
 
 =head1 VERSION
 
-version 0.100270
+version 0.101860
 
 =head1 METHODS
 
@@ -109,8 +110,17 @@ Grabs the next line and splits on tabs.  Returns an array containing the output 
 
 =head1 AUTHORS
 
-  andrew grangaard <spazm@cpan.org>
-  Naoya Ito <naoya@hatena.ne.jp>
+=over 4
+
+=item *
+
+andrew grangaard <spazm@cpan.org>
+
+=item *
+
+Naoya Ito <naoya@hatena.ne.jp>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
