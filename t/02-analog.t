@@ -1,17 +1,16 @@
-#!env perl
-
 use strict;
 use warnings;
 
 use Test::More tests=>7;
 use Test::Command;
+use Config;
 
 use FindBin;
 ok( $FindBin::Bin );
 
 my $path="$FindBin::Bin/analog/";
 
-my $perl            = 'env perl';
+my $perl            = $Config{perlpath};
 my $sort            = $FindBin::Bin . '/sort.pl';
 
 my $map             = $path . 'map.pl';
@@ -24,16 +23,16 @@ TEST_MAP:
 {
     my $map_cmd = Test::Command->new( cmd => "$perl $map < $input" );
     $map_cmd->exit_is_num( 0, 'map exit value is 0' );
+    $map_cmd->stderr_is_eq( '', 'stderr is blank in mapper');
     $map_cmd->stdout_is_file( $expected_map,
         "map output matches expected [$expected_map]" );
-    $map_cmd->stderr_is_eq( '', 'stderr is blank in mapper');
 }
 
 TEST_REDUCE:
 {
     my $reduce_cmd = Test::Command->new( cmd => "$perl $sort $expected_map | $perl $reduce" );
     $reduce_cmd->exit_is_num( 0, 'reducer exit value is 0' );
+    $reduce_cmd->stderr_is_eq( '', 'stderr is blank in reducer');
     $reduce_cmd->stdout_is_file( $expected_reduce,
         "reduce output matches expected [$expected_reduce]" );
-    $reduce_cmd->stderr_is_eq( '', 'stderr is blank in reducer');
 }

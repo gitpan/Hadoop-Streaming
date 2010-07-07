@@ -13,6 +13,7 @@ examples/wordcount/example_local.sh
 examples/wordcount/input/terms.txt
 examples/wordcount/map.pl
 examples/wordcount/reduce.pl
+lib/Hadoop/Streaming.pm
 lib/Hadoop/Streaming/Mapper.pm
 lib/Hadoop/Streaming/Reducer.pm
 lib/Hadoop/Streaming/Reducer/Input.pm

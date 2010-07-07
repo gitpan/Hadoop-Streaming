@@ -1,11 +1,11 @@
 {
-   "abstract" : "Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.",
+   "abstract" : "Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs ",
    "author" : [
       "andrew grangaard <spazm@cpan.org>",
       "Naoya Ito <naoya@hatena.ne.jp>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.101811, CPAN::Meta::Converter version 2.101591",
+   "generated_by" : "Dist::Zilla version 4.101831, CPAN::Meta::Converter version 2.101591",
    "license" : [
       "perl_5"
    ],
@@ -30,6 +30,7 @@
       },
       "test" : {
          "requires" : {
+            "Config" : 0,
             "FindBin" : 0,
             "Test::Command" : 0,
             "Test::More" : 0
@@ -44,6 +45,6 @@
          "web" : "http://github.com/spazm/hadoop-streaming-frontend"
       }
    },
-   "version" : "0.101860"
+   "version" : "0.101880"
 }
 

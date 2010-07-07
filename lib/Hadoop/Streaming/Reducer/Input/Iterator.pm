@@ -72,7 +72,7 @@ Hadoop::Streaming::Reducer::Input::Iterator - Collects values for each key toget
 
 =head1 VERSION
 
-version 0.101860
+version 0.101880
 
 =head1 METHODS
 

@@ -1,18 +1,15 @@
-package Hadoop::Streaming::Role::Iterator;
-use Moose::Role;
+package Hadoop::Streaming;
 
-requires qw(has_next next);
-#ABSTRACT: Role to require has_next and next
+#ABSTRACT: Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs 
 
 1;
-
 
 __END__
 =pod
 
 =head1 NAME
 
-Hadoop::Streaming::Role::Iterator - Role to require has_next and next
+Hadoop::Streaming - Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs 
 
 =head1 VERSION
 

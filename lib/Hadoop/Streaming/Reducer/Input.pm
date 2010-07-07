@@ -70,7 +70,7 @@ Hadoop::Streaming::Reducer::Input - Parse input stream for reducer
 
 =head1 VERSION
 
-version 0.101860
+version 0.101880
 
 =head1 METHODS
 

@@ -9,9 +9,10 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.',
+  'ABSTRACT' => 'Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs ',
   'AUTHOR' => 'andrew grangaard <spazm@cpan.org>, Naoya Ito <naoya@hatena.ne.jp>',
   'BUILD_REQUIRES' => {
+    'Config' => '0',
     'FindBin' => '0',
     'Test::Command' => '0',
     'Test::More' => '0'
@@ -29,7 +30,7 @@ my %WriteMakefileArgs = (
     'Moose::Role' => '0',
     'Params::Validate' => '0'
   },
-  'VERSION' => '0.101860',
+  'VERSION' => '0.101880',
   'test' => {
     'TESTS' => 't/*.t'
   }

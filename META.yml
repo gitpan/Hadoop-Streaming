@@ -1,16 +1,17 @@
 ---
-abstract: 'Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.'
+abstract: 'Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs '
 author:
   - 'andrew grangaard <spazm@cpan.org>'
   - 'Naoya Ito <naoya@hatena.ne.jp>'
 build_requires:
+  Config: 0
   FindBin: 0
   Test::Command: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.101811, CPAN::Meta::Converter version 2.101591'
+generated_by: 'Dist::Zilla version 4.101831, CPAN::Meta::Converter version 2.101591'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,4 +24,4 @@ requires:
   Params::Validate: 0
 resources:
   repository: http://github.com/spazm/hadoop-streaming-frontend.git
-version: 0.101860
+version: 0.101880

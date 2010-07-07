@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution Hadoop-Streaming,
-version 0.101860:
+version 0.101880:
 
-  Simplify writing Hadoop Streaming Mapper jobs.  Write a map() function and let this role handle the Stream interface.
+  Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs 
 
 This software is copyright (c) 2010 by Naoya Ito <naoya@hatena.ne.jp>.
 

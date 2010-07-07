@@ -41,7 +41,7 @@ Hadoop::Streaming::Reducer - Simplify writing Hadoop Streaming jobs. Write a red
 
 =head1 VERSION
 
-version 0.101860
+version 0.101880
 
 =head1 SYNOPSIS
 

@@ -58,7 +58,7 @@ Hadoop::Streaming::Role::Emitter - Role to provide emit, counter, and status int
 
 =head1 VERSION
 
-version 0.101860
+version 0.101880
 
 =head1 METHODS
 
