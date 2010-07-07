@@ -1,4 +1,7 @@
 package Hadoop::Streaming;
+BEGIN {
+  $Hadoop::Streaming::VERSION = '0.101881';
+}
 
 #ABSTRACT: Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs 
 
@@ -13,7 +16,7 @@ Hadoop::Streaming - Contains Mapper and Reducer classes to simplify writing Hado
 
 =head1 VERSION
 
-version 0.101880
+version 0.101881
 
 =head1 AUTHORS
 
