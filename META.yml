@@ -1,5 +1,5 @@
 ---
-abstract: 'Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs '
+abstract: 'Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs '
 author:
   - 'andrew grangaard <spazm@cpan.org>'
   - 'Naoya Ito <naoya@hatena.ne.jp>'
@@ -24,4 +24,4 @@ requires:
   Params::Validate: 0
 resources:
   repository: http://github.com/spazm/hadoop-streaming-frontend.git
-version: 0.101881
+version: 0.102490

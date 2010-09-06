@@ -14,6 +14,7 @@ examples/wordcount/input/terms.txt
 examples/wordcount/map.pl
 examples/wordcount/reduce.pl
 lib/Hadoop/Streaming.pm
+lib/Hadoop/Streaming/Combiner.pm
 lib/Hadoop/Streaming/Mapper.pm
 lib/Hadoop/Streaming/Reducer.pm
 lib/Hadoop/Streaming/Reducer/Input.pm
@@ -30,6 +31,7 @@ t/analog/expected-reduce.out
 t/analog/map.pl
 t/analog/reduce.pl
 t/sort.pl
+t/wordcount/combine.pl
 t/wordcount/expected-map.out
 t/wordcount/expected-reduce.out
 t/wordcount/map.pl

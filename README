@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution Hadoop-Streaming,
-version 0.101881:
+version 0.102490:
 
-  Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs 
+  Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs 
 
 This software is copyright (c) 2010 by Naoya Ito <naoya@hatena.ne.jp>.
 

@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Contains Mapper and Reducer classes to simplify writing Hadoop Streaming jobs ',
+  'ABSTRACT' => 'Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs ',
   'AUTHOR' => 'andrew grangaard <spazm@cpan.org>, Naoya Ito <naoya@hatena.ne.jp>',
   'BUILD_REQUIRES' => {
     'Config' => '0',
@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'Moose::Role' => '0',
     'Params::Validate' => '0'
   },
-  'VERSION' => '0.101881',
+  'VERSION' => '0.102490',
   'test' => {
     'TESTS' => 't/*.t'
   }
