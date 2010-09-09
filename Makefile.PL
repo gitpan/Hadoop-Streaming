@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'Moose::Role' => '0',
     'Params::Validate' => '0'
   },
-  'VERSION' => '0.102490',
+  'VERSION' => '0.102520',
   'test' => {
     'TESTS' => 't/*.t'
   }

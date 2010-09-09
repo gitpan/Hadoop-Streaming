@@ -24,4 +24,4 @@ requires:
   Params::Validate: 0
 resources:
   repository: http://github.com/spazm/hadoop-streaming-frontend.git
-version: 0.102490
+version: 0.102520

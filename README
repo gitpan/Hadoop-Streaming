@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Hadoop-Streaming,
-version 0.102490:
+version 0.102520:
 
   Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs 
 

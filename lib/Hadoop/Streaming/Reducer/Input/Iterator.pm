@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Reducer::Input::Iterator;
 BEGIN {
-  $Hadoop::Streaming::Reducer::Input::Iterator::VERSION = '0.102490';
+  $Hadoop::Streaming::Reducer::Input::Iterator::VERSION = '0.102520';
 }
 use Moose;
 with 'Hadoop::Streaming::Role::Iterator';
@@ -75,7 +75,7 @@ Hadoop::Streaming::Reducer::Input::Iterator - Collects values for each key toget
 
 =head1 VERSION
 
-version 0.102490
+version 0.102520
 
 =head1 METHODS
 
