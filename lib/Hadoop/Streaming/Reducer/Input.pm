@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Reducer::Input;
 BEGIN {
-  $Hadoop::Streaming::Reducer::Input::VERSION = '0.102520';
+  $Hadoop::Streaming::Reducer::Input::VERSION = '0.103190';
 }
 use Moose;
 use Hadoop::Streaming::Reducer::Input::Iterator;
@@ -18,11 +18,12 @@ has buffer => (
 );
 
 
-sub next_key {
+sub next_key
+{
     my $self = shift;
     my $line = $self->buffer ? $self->buffer : $self->next_line;
     return if not defined $line;
-    my ($key, $value) = split /\t/, $line;
+    my ( $key, $value ) = split /\t/, $line, 2;
     return $key;
 }
 
@@ -53,11 +54,12 @@ sub iterator {
 }
 
 
-sub each {
+sub each
+{
     my $self = shift;
     my $line = $self->getline or return;
     chomp $line;
-    split /\t/, $line;
+    split /\t/, $line, 2;
 }
 
 __PACKAGE__->meta->make_immutable;
@@ -73,7 +75,7 @@ Hadoop::Streaming::Reducer::Input - Parse input stream for reducer
 
 =head1 VERSION
 
-version 0.102520
+version 0.103190
 
 =head1 METHODS
 

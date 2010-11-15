@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Mapper;
 BEGIN {
-  $Hadoop::Streaming::Mapper::VERSION = '0.102520';
+  $Hadoop::Streaming::Mapper::VERSION = '0.103190';
 }
 use Moose::Role;
 use IO::Handle;
@@ -37,7 +37,7 @@ Hadoop::Streaming::Mapper - Simplify writing Hadoop Streaming Mapper jobs.  Writ
 
 =head1 VERSION
 
-version 0.102520
+version 0.103190
 
 =head1 SYNOPSIS
 

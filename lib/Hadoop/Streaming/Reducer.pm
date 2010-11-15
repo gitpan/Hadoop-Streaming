@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Reducer;
 BEGIN {
-  $Hadoop::Streaming::Reducer::VERSION = '0.102520';
+  $Hadoop::Streaming::Reducer::VERSION = '0.103190';
 }
 use Moose::Role;
 
@@ -44,7 +44,7 @@ Hadoop::Streaming::Reducer - Simplify writing Hadoop Streaming jobs. Write a red
 
 =head1 VERSION
 
-version 0.102520
+version 0.103190
 
 =head1 SYNOPSIS
 

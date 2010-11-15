@@ -1,6 +1,6 @@
 package Hadoop::Streaming;
 BEGIN {
-  $Hadoop::Streaming::VERSION = '0.102520';
+  $Hadoop::Streaming::VERSION = '0.103190';
 }
 
 #ABSTRACT: Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs 
@@ -17,7 +17,7 @@ Hadoop::Streaming - Contains Mapper, Combiner and Reducer roles to simplify writ
 
 =head1 VERSION
 
-version 0.102520
+version 0.103190
 
 =head1 SYNOPSIS
 

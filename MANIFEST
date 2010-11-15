@@ -31,6 +31,12 @@ t/analog/expected-reduce.out
 t/analog/map.pl
 t/analog/reduce.pl
 t/sort.pl
+t/tab-delimited-reduce-input.t
+t/tab-delimited-reduce-input/example-input.txt
+t/tab-delimited-reduce-input/expected-map.out
+t/tab-delimited-reduce-input/expected-reduce.out
+t/tab-delimited-reduce-input/map.pl
+t/tab-delimited-reduce-input/reduce.pl
 t/wordcount/combine.pl
 t/wordcount/expected-map.out
 t/wordcount/expected-reduce.out

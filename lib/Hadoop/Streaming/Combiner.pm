@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Combiner;
 BEGIN {
-  $Hadoop::Streaming::Combiner::VERSION = '0.102520';
+  $Hadoop::Streaming::Combiner::VERSION = '0.103190';
 }
 use Moose::Role;
 
@@ -43,7 +43,7 @@ Hadoop::Streaming::Combiner - Simplify writing Hadoop Streaming jobs.  Combiner 
 
 =head1 VERSION
 
-version 0.102520
+version 0.103190
 
 =head1 SYNOPSIS
 
