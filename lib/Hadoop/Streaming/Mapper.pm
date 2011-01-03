@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Mapper;
 BEGIN {
-  $Hadoop::Streaming::Mapper::VERSION = '0.103190';
+  $Hadoop::Streaming::Mapper::VERSION = '0.110030';
 }
 use Moose::Role;
 use IO::Handle;
@@ -37,7 +37,7 @@ Hadoop::Streaming::Mapper - Simplify writing Hadoop Streaming Mapper jobs.  Writ
 
 =head1 VERSION
 
-version 0.103190
+version 0.110030
 
 =head1 SYNOPSIS
 
@@ -111,7 +111,7 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2011 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

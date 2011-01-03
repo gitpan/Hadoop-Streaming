@@ -5,7 +5,7 @@
       "Naoya Ito <naoya@hatena.ne.jp>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102343, CPAN::Meta::Converter version 2.101591",
+   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
    "license" : [
       "perl_5"
    ],
@@ -45,6 +45,6 @@
          "web" : "http://github.com/spazm/hadoop-streaming-frontend"
       }
    },
-   "version" : "0.103190"
+   "version" : "0.110030"
 }
 

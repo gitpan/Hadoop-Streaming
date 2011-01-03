@@ -1,6 +1,6 @@
 package Hadoop::Streaming;
 BEGIN {
-  $Hadoop::Streaming::VERSION = '0.103190';
+  $Hadoop::Streaming::VERSION = '0.110030';
 }
 
 #ABSTRACT: Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs 
@@ -17,9 +17,11 @@ Hadoop::Streaming - Contains Mapper, Combiner and Reducer roles to simplify writ
 
 =head1 VERSION
 
-version 0.103190
+version 0.110030
 
 =head1 SYNOPSIS
+
+My/Hadoop/Example.pm:
 
     package My::Hadoop::Example;
     use Moose::Role;
@@ -27,35 +29,38 @@ version 0.103190
     sub map 
     { 
         my ($self, $line) = @_;
-        ...
+        my ($key, $value);
+        #... create $key and $value
         $self->emit( $key => $value);
     }
     sub reduce 
     { 
         my ( $self, $key, $value_iterator) = @_;
-        ...
-        while( $value_iterator->has_next() ) { ... }
+        my $composite_value;
+        #... set $composite_value
+        while( $value_iterator->has_next() ) { }
         $self->emit( $key, $composite_value );
     } 
     sub combine 
     { 
         my ( $self, $key, $value_iterator) = @_;
-        ...
-        while( $value_iterator->has_next() ) { ... }
+        my $composite_value;
+        #... set $composite_value
+        while( $value_iterator->has_next() ) { }
         $self->emit( $key, $composite_value );
     }
 
     package My::Hadoop::Example::Mapper;
     use Moose;
-    with Hadoop::Streaming::Mapper,   My::Hadoop::Example;
+    with qw(Hadoop::Streaming::Mapper My::Hadoop::Example);
 
     package My::Hadoop::Example::Combiner;
     use Moose;
-    with Hadoop::Streaming::Combiner, My::Hadoop::Example;
+    with qw(Hadoop::Streaming::Combiner My::Hadoop::Example);
 
     package My::Hadoop::Example::Reducer;
     use Moose;
-    with Hadoop::Streaming::Reducer,  My::Hadoop::Example;
+    with qw(Hadoop::Streaming::Reducer  My::Hadoop::Example);
 
     1;
 
@@ -315,7 +320,7 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2011 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

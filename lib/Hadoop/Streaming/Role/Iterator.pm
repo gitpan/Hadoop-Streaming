@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Role::Iterator;
 BEGIN {
-  $Hadoop::Streaming::Role::Iterator::VERSION = '0.103190';
+  $Hadoop::Streaming::Role::Iterator::VERSION = '0.110030';
 }
 use Moose::Role;
 
@@ -19,7 +19,7 @@ Hadoop::Streaming::Role::Iterator - Role to require has_next and next
 
 =head1 VERSION
 
-version 0.103190
+version 0.110030
 
 =head1 AUTHORS
 
@@ -37,7 +37,7 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2011 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
