@@ -1,8 +1,8 @@
 package Hadoop::Streaming::Reducer::Input::ValuesIterator;
-BEGIN {
-  $Hadoop::Streaming::Reducer::Input::ValuesIterator::VERSION = '0.110030';
+{
+  $Hadoop::Streaming::Reducer::Input::ValuesIterator::VERSION = '0.113160';
 }
-use Moose;
+use Any::Moose;
 with 'Hadoop::Streaming::Role::Iterator';
 
 #ABSTRACT: Role providing access to values for a given key.
@@ -51,7 +51,7 @@ Hadoop::Streaming::Reducer::Input::ValuesIterator - Role providing access to val
 
 =head1 VERSION
 
-version 0.110030
+version 0.113160
 
 =head1 METHODS
 

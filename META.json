@@ -1,11 +1,11 @@
 {
-   "abstract" : "Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs ",
+   "abstract" : "Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs",
    "author" : [
       "andrew grangaard <spazm@cpan.org>",
       "Naoya Ito <naoya@hatena.ne.jp>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112621",
    "license" : [
       "perl_5"
    ],
@@ -17,14 +17,13 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
          "requires" : {
+            "Any::Moose" : 0,
             "IO::Handle" : 0,
-            "Moose" : 0,
-            "Moose::Role" : 0,
             "Params::Validate" : 0
          }
       },
@@ -32,8 +31,11 @@
          "requires" : {
             "Config" : 0,
             "FindBin" : 0,
+            "Moose" : 0,
             "Test::Command" : 0,
-            "Test::More" : 0
+            "Test::More" : 0,
+            "strict" : 0,
+            "warnings" : 0
          }
       }
    },
@@ -45,6 +47,6 @@
          "web" : "http://github.com/spazm/hadoop-streaming-frontend"
       }
    },
-   "version" : "0.110030"
+   "version" : "0.113160"
 }
 

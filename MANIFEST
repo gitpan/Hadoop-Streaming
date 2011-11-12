@@ -25,6 +25,12 @@ lib/Hadoop/Streaming/Role/Iterator.pm
 t/00-load.t
 t/01-wordcount.t
 t/02-analog.t
+t/03-analog-mouse.t
+t/analog-mouse/example-access.log
+t/analog-mouse/expected-map.out
+t/analog-mouse/expected-reduce.out
+t/analog-mouse/map.pl
+t/analog-mouse/reduce.pl
 t/analog/example-access.log
 t/analog/expected-map.out
 t/analog/expected-reduce.out

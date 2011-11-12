@@ -1,8 +1,8 @@
 package Hadoop::Streaming::Reducer;
-BEGIN {
-  $Hadoop::Streaming::Reducer::VERSION = '0.110030';
+{
+  $Hadoop::Streaming::Reducer::VERSION = '0.113160';
 }
-use Moose::Role;
+use Any::Moose qw(Role);
 
 use IO::Handle;
 use Hadoop::Streaming::Reducer::Input;
@@ -44,14 +44,14 @@ Hadoop::Streaming::Reducer - Simplify writing Hadoop Streaming jobs. Write a red
 
 =head1 VERSION
 
-version 0.110030
+version 0.113160
 
 =head1 SYNOPSIS
 
     #!/usr/bin/env perl
 
     package WordCount::Reducer;
-    use Moose;
+    use Any::Moose;
     with qw/Hadoop::Streaming::Reducer/;
 
     sub reduce {

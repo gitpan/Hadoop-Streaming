@@ -4,35 +4,37 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs ',
-  'AUTHOR' => 'andrew grangaard <spazm@cpan.org>, Naoya Ito <naoya@hatena.ne.jp>',
-  'BUILD_REQUIRES' => {
-    'Config' => '0',
-    'FindBin' => '0',
-    'Test::Command' => '0',
-    'Test::More' => '0'
+  "ABSTRACT" => "Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs",
+  "AUTHOR" => "andrew grangaard <spazm\@cpan.org>, Naoya Ito <naoya\@hatena.ne.jp>",
+  "BUILD_REQUIRES" => {
+    "Config" => 0,
+    "FindBin" => 0,
+    "Moose" => 0,
+    "Test::Command" => 0,
+    "Test::More" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Hadoop-Streaming',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Hadoop::Streaming',
-  'PREREQ_PM' => {
-    'IO::Handle' => '0',
-    'Moose' => '0',
-    'Moose::Role' => '0',
-    'Params::Validate' => '0'
+  "DISTNAME" => "Hadoop-Streaming",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Hadoop::Streaming",
+  "PREREQ_PM" => {
+    "Any::Moose" => 0,
+    "IO::Handle" => 0,
+    "Params::Validate" => 0
   },
-  'VERSION' => '0.110030',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.113160",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

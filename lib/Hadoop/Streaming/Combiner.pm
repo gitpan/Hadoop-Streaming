@@ -1,8 +1,8 @@
 package Hadoop::Streaming::Combiner;
-BEGIN {
-  $Hadoop::Streaming::Combiner::VERSION = '0.110030';
+{
+  $Hadoop::Streaming::Combiner::VERSION = '0.113160';
 }
-use Moose::Role;
+use Any::Moose  qw(Role);
 
 use IO::Handle;
 use Hadoop::Streaming::Reducer::Input;
@@ -43,14 +43,14 @@ Hadoop::Streaming::Combiner - Simplify writing Hadoop Streaming jobs.  Combiner 
 
 =head1 VERSION
 
-version 0.110030
+version 0.113160
 
 =head1 SYNOPSIS
 
     #!/usr/bin/env perl
 
     package WordCount::Combiner;
-    use Moose;
+    use Any::Moose;
     with qw/Hadoop::Streaming::Combiner/;
 
     sub combine {

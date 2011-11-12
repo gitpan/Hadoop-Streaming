@@ -8,8 +8,9 @@ use Config;
 use FindBin;
 ok( $FindBin::Bin );
 
-my $path="$FindBin::Bin/tab-delimited-reduce-input/";
 my $inc = join ( " ", map { "-I $_" } @INC );
+
+my $path="$FindBin::Bin/analog-mouse/";
 
 my $perl            = $Config{perlpath};
 $perl              .= " $inc" if $inc;
@@ -17,7 +18,7 @@ my $sort            = $FindBin::Bin . '/sort.pl';
 
 my $map             = $path . 'map.pl';
 my $reduce          = $path . 'reduce.pl';
-my $input           = $path . 'example-input.txt';
+my $input           = $path . 'example-access.log';
 my $expected_map    = $path . 'expected-map.out';
 my $expected_reduce = $path . 'expected-reduce.out';
 

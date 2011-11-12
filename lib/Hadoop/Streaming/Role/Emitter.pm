@@ -1,8 +1,8 @@
 package Hadoop::Streaming::Role::Emitter;
-BEGIN {
-  $Hadoop::Streaming::Role::Emitter::VERSION = '0.110030';
+{
+  $Hadoop::Streaming::Role::Emitter::VERSION = '0.113160';
 }
-use Moose::Role;
+use Any::Moose qw(Role);
 use Params::Validate qw/validate_pos/;
 
 #provides qw(run emit counter status);
@@ -61,7 +61,7 @@ Hadoop::Streaming::Role::Emitter - Role to provide emit, counter, and status int
 
 =head1 VERSION
 
-version 0.110030
+version 0.113160
 
 =head1 METHODS
 

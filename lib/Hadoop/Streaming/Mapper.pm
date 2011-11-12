@@ -1,8 +1,8 @@
 package Hadoop::Streaming::Mapper;
-BEGIN {
-  $Hadoop::Streaming::Mapper::VERSION = '0.110030';
+{
+  $Hadoop::Streaming::Mapper::VERSION = '0.113160';
 }
-use Moose::Role;
+use Any::Moose qw(Role);
 use IO::Handle;
 
 with 'Hadoop::Streaming::Role::Emitter';
@@ -37,14 +37,14 @@ Hadoop::Streaming::Mapper - Simplify writing Hadoop Streaming Mapper jobs.  Writ
 
 =head1 VERSION
 
-version 0.110030
+version 0.113160
 
 =head1 SYNOPSIS
 
   #!/usr/bin/env perl
   
   package Wordcount::Mapper;
-  use Moose;
+  use Any::Moose;
   with 'Hadoop::Streaming::Mapper';
   
   sub map
