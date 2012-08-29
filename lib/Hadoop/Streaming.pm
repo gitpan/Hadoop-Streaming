@@ -1,6 +1,6 @@
 package Hadoop::Streaming;
 {
-  $Hadoop::Streaming::VERSION = '0.113160';
+  $Hadoop::Streaming::VERSION = '0.122420';
 }
 
 #ABSTRACT: Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs
@@ -17,7 +17,7 @@ Hadoop::Streaming - Contains Mapper, Combiner and Reducer roles to simplify writ
 
 =head1 VERSION
 
-version 0.113160
+version 0.122420
 
 =head1 SYNOPSIS
 
@@ -105,11 +105,13 @@ Reduce jobs are provided a stream of key\tvalue lines.  multivalued keys appear 
 Hadoop::Mapper consumes and chomps lines from STDIN and calls map($line) once per line.  This is initiated by the run() method.
 
 example mapper input:
+
     line1
     line2
     line3
 
 Hadoop::Mapper transforms this into 3 calls to map()
+
     map(line1)
     map(line2)
     map(line3)
@@ -119,6 +121,7 @@ Hadoop::Mapper transforms this into 3 calls to map()
 Hadoop::Reducer abstracts this stream into an interface of (key, value-iterator).  reduce() is called once per key, instead of once per line.  The reduce job pulls values from the iterator and outputs key/value pairs to STDOUT.  emit() is provided as a convenience for outputing key/value pairs.
 
 example reducer input:
+
     key1 value1
     key2 valuea
     key2 valuec
@@ -127,6 +130,7 @@ example reducer input:
     key3 valuebar
 
 Hadoop::Streaming::Reduce transforms this input into three calls to reduce():
+
     reduce( key,  iterator_over(qw(value1)) );
     reduce( key2, iterator_over(qw(valuea valuec valueb)) );
     reduce( key3, iterator_over(qw(valuefoo valuebarr)) );
@@ -134,6 +138,7 @@ Hadoop::Streaming::Reduce transforms this input into three calls to reduce():
 =item Hadoop::Streaming::Combiner interface
 
 The Hadoop::Streaming::Combiner interface is analagous to the Hadoop::Streaming::Reducer interface.  combine() is called instead of reduce() for each key.  The above example would produce three calls to combine():
+
     combine( key,  iterator_over(qw(value1)) );
     combine( key2, iterator_over(qw(valuea valuec valueb)) );
     combine( key3, iterator_over(qw(valuefoo valuebarr)) );
@@ -352,7 +357,7 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2012 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

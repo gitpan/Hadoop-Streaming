@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Reducer;
 {
-  $Hadoop::Streaming::Reducer::VERSION = '0.113160';
+  $Hadoop::Streaming::Reducer::VERSION = '0.122420';
 }
 use Any::Moose qw(Role);
 
@@ -44,7 +44,7 @@ Hadoop::Streaming::Reducer - Simplify writing Hadoop Streaming jobs. Write a red
 
 =head1 VERSION
 
-version 0.113160
+version 0.122420
 
 =head1 SYNOPSIS
 
@@ -101,7 +101,7 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2012 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

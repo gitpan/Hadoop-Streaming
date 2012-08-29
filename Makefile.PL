@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     "IO::Handle" => 0,
     "Params::Validate" => 0
   },
-  "VERSION" => "0.113160",
+  "VERSION" => "0.122420",
   "test" => {
     "TESTS" => "t/*.t"
   }

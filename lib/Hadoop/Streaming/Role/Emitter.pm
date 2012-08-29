@@ -1,6 +1,6 @@
 package Hadoop::Streaming::Role::Emitter;
 {
-  $Hadoop::Streaming::Role::Emitter::VERSION = '0.113160';
+  $Hadoop::Streaming::Role::Emitter::VERSION = '0.122420';
 }
 use Any::Moose qw(Role);
 use Params::Validate qw/validate_pos/;
@@ -61,7 +61,7 @@ Hadoop::Streaming::Role::Emitter - Role to provide emit, counter, and status int
 
 =head1 VERSION
 
-version 0.113160
+version 0.122420
 
 =head1 METHODS
 
@@ -114,7 +114,7 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2012 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
