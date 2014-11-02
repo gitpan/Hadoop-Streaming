@@ -1,8 +1,7 @@
 package Hadoop::Streaming::Reducer::Input::Iterator;
-{
-  $Hadoop::Streaming::Reducer::Input::Iterator::VERSION = '0.122420';
-}
-use Any::Moose;
+$Hadoop::Streaming::Reducer::Input::Iterator::VERSION = '0.143060';
+use Moo;
+use Safe::Isa;
 with 'Hadoop::Streaming::Role::Iterator';
 
 use Hadoop::Streaming::Reducer::Input::ValuesIterator;
@@ -11,7 +10,10 @@ use Hadoop::Streaming::Reducer::Input::ValuesIterator;
 
 has input => (
     is       => 'ro',
-    isa      => 'Hadoop::Streaming::Reducer::Input',
+    isa      => sub {
+        die 'not a Hadoop::Streaming::Reducer::Input object'
+            unless $_[0]->$_isa('Hadoop::Streaming::Reducer::Input');
+    },
     required => 1,
 );
 
@@ -67,7 +69,10 @@ __PACKAGE__->meta->make_immutable;
 1;
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -75,7 +80,7 @@ Hadoop::Streaming::Reducer::Input::Iterator - Collects values for each key toget
 
 =head1 VERSION
 
-version 0.122420
+version 0.143060
 
 =head1 METHODS
 
@@ -118,10 +123,9 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2014 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

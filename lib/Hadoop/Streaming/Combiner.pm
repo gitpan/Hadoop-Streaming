@@ -1,8 +1,6 @@
 package Hadoop::Streaming::Combiner;
-{
-  $Hadoop::Streaming::Combiner::VERSION = '0.122420';
-}
-use Any::Moose  qw(Role);
+$Hadoop::Streaming::Combiner::VERSION = '0.143060';
+use Moo::Role;
 
 use IO::Handle;
 use Hadoop::Streaming::Reducer::Input;
@@ -35,7 +33,10 @@ sub run {
 1;
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -43,14 +44,14 @@ Hadoop::Streaming::Combiner - Simplify writing Hadoop Streaming jobs.  Combiner 
 
 =head1 VERSION
 
-version 0.122420
+version 0.143060
 
 =head1 SYNOPSIS
 
     #!/usr/bin/env perl
 
     package WordCount::Combiner;
-    use Any::Moose;
+    use Moo;
     with qw/Hadoop::Streaming::Combiner/;
 
     sub combine {
@@ -104,10 +105,9 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2014 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

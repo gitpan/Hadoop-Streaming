@@ -1,15 +1,15 @@
 package Hadoop::Streaming;
-{
-  $Hadoop::Streaming::VERSION = '0.122420';
-}
-
+$Hadoop::Streaming::VERSION = '0.143060';
 #ABSTRACT: Contains Mapper, Combiner and Reducer roles to simplify writing Hadoop Streaming jobs
 
 
 1;
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -17,14 +17,14 @@ Hadoop::Streaming - Contains Mapper, Combiner and Reducer roles to simplify writ
 
 =head1 VERSION
 
-version 0.122420
+version 0.143060
 
 =head1 SYNOPSIS
 
 My/Hadoop/Example.pm:
 
     package My::Hadoop::Example;
-    use Any::Moose qw(Role);
+    use Moo::Role;
 
     sub map
     {
@@ -51,15 +51,15 @@ My/Hadoop/Example.pm:
     }
 
     package My::Hadoop::Example::Mapper;
-    use Any::Moose;
+    use Moo;
     with qw(Hadoop::Streaming::Mapper My::Hadoop::Example);
 
     package My::Hadoop::Example::Combiner;
-    use Any::Moose;
+    use Moo;
     with qw(Hadoop::Streaming::Combiner My::Hadoop::Example);
 
     package My::Hadoop::Example::Reducer;
-    use Any::Moose;
+    use Moo;
     with qw(Hadoop::Streaming::Reducer  My::Hadoop::Example);
 
     1;
@@ -357,10 +357,9 @@ Naoya Ito <naoya@hatena.ne.jp>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Naoya Ito <naoya@hatena.ne.jp>.
+This software is copyright (c) 2014 by Naoya Ito <naoya@hatena.ne.jp>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

@@ -5,7 +5,7 @@
       "Naoya Ito <naoya@hatena.ne.jp>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112621",
+   "generated_by" : "Dist::Zilla version 5.022, CPAN::Meta::Converter version 2.142060",
    "license" : [
       "perl_5"
    ],
@@ -17,25 +17,25 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "Any::Moose" : 0,
-            "IO::Handle" : 0,
-            "Params::Validate" : 0
+            "IO::Handle" : "0",
+            "Moo" : "0",
+            "Moo::Role" : "0",
+            "Params::Validate" : "0",
+            "Safe::Isa" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "Config" : 0,
-            "FindBin" : 0,
-            "Moose" : 0,
-            "Test::Command" : 0,
-            "Test::More" : 0,
-            "strict" : 0,
-            "warnings" : 0
+            "FindBin" : "0",
+            "Test::Command" : "0",
+            "Test::More" : "0",
+            "strict" : "0",
+            "warnings" : "0"
          }
       }
    },
@@ -43,10 +43,10 @@
    "resources" : {
       "repository" : {
          "type" : "git",
-         "url" : "http://github.com/spazm/hadoop-streaming-frontend.git",
+         "url" : "git://github.com/spazm/hadoop-streaming-frontend",
          "web" : "http://github.com/spazm/hadoop-streaming-frontend"
       }
    },
-   "version" : "0.122420"
+   "version" : "0.143060"
 }
 
